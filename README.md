@@ -19,6 +19,6 @@ Para melhor compreensão e monitoramento das atividades do estoque, foram incorp
 ## Passos:
 1. Ligar o JsonServer: <https://replit.com/@pauloharaujo345/StockTracker>
 (Fazer um fork e iniciar a aplicação)
-2. Entrar no site: <https://paulohm65.github.io/StockTracker/HOME/home.html>
+2. Entrar no site: <https://paulohm65.github.io/StorageTracker/HOME/home.html>
 >
  
