@@ -223,10 +223,10 @@ function updateTable() {
 /*------------- NAVEGAÇÃO TOGGLE -------------------*/
 
 function HOME() {
-    window.location.href = "http://127.0.0.1:5501/HOME/home.html";
+    window.location.href = "https://paulohm65.github.io/StorageTracker/HOME/home.html";
 }
 function INVENTARIO() {
-    window.location.href = "http://127.0.0.1:5501/tela_categorais/tela_categorias.html";
+    window.location.href = "https://paulohm65.github.io/StorageTracker/tela_categorais/tela_categorias.html";
 }
 
 document.getElementById('btncadastar').addEventListener('click', HOME);
@@ -265,7 +265,7 @@ document.addEventListener('DOMContentLoaded', function () {
 /* ---------------------- pASSA A TELA  -----------------------------*/
 
 function proximoTela() {
-    window.location.href = "http://127.0.0.1:5501/tela_categorais/tela_categorias.html";
+    window.location.href = "https://paulohm65.github.io/StorageTracker/tela_categorais/tela_categorias.html";
 }
 
 
