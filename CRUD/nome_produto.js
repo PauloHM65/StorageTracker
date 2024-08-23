@@ -228,9 +228,13 @@ function HOME() {
 function INVENTARIO() {
     window.location.href = "https://paulohm65.github.io/StorageTracker/tela_categorais/tela_categorias.html";
 }
+function BTNCRUD() {
+    window.location.href = "https://paulohm65.github.io/StorageTracker/CRUD/nome_produto.html";
+}
 
 document.getElementById('btncadastar').addEventListener('click', HOME);
 document.getElementById('btninventario').addEventListener('click', INVENTARIO);
+document.getElementById('btncrud').addEventListener('click', BTNCRUD);
 
 
 /* ---------------------- VOLTA A PAGINA ANTIGA  -----------------------------*/
