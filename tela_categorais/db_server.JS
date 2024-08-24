@@ -2,25 +2,25 @@
 
 const UrlProdutos = "https://f936eba1-a32f-4b54-a5ac-13c05aaeba13-00-1zx5p16bjqihd.spock.replit.dev/produtos"
 
+const UrlCategorias = "https://f936eba1-a32f-4b54-a5ac-13c05aaeba13-00-1zx5p16bjqihd.spock.replit.dev/categorias"
 
- function carregaDadosJSONServerPrudutos (func) {
+function carregaDadosJSONServerPrudutos (func) {
     fetch(UrlProdutos)
         .then (function (response) { return response.json() })
         .then (function (dados) {
-          func (dados)
+          let Dados = dados
+            func (Dados)
         })
 }
 
 /* ----------------- CARREGAR O BANCO DE DADOS ----------*/
 
-const UrlCategorias = "https://f936eba1-a32f-4b54-a5ac-13c05aaeba13-00-1zx5p16bjqihd.spock.replit.dev/categorias"
-
-
 function carregaDadosJSONServerCategorias (func) {
     fetch(UrlCategorias)
         .then (function (response) { return response.json() })
         .then (function (dados) {
-            func (dados)
+          let Dados = dados
+            func (Dados)
         })
 }
 
