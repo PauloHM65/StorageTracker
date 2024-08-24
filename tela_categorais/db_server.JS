@@ -19,8 +19,8 @@ function carregaDadosJSONServerCategorias (func) {
     fetch(UrlCategorias)
         .then (function (response) { return response.json() })
         .then (function (dados) {
-          let Dados = dados
-            func (Dados)
+          console.log(dados)
+          func (dados)
         })
 }
 
