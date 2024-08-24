@@ -65,7 +65,7 @@ function incluirDados() {
     imprimeDados();
 }*/
 
-function imprimeDado() {
+function imprimeDado(categorias) {
 
     let categori = document.querySelector('.categoriaProdutos');
     let nome = document.getElementById('campoNome');
