@@ -1,65 +1,210 @@
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
 }
 
+
 main {
-    min-height: 100vh;
     background-color: #88db96;
-    z-index: 1;
-    box-sizing: border-box; 
+    z-index: 0;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
+    padding: 2px;
+    height: 100vh;
+    /* Ocupa toda a altura da tela */
+    background-image: url('storage.jpeg');
+    /* Caminho para sua imagem */
+    background-size: cover;
+    /* A imagem cobre toda a área */
+    background-position: center;
+    /* A imagem é centralizada */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-header{
+main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(136, 219, 150, 0.87);
+    /* Cor verde com transparência */
+    z-index: 1;
+}
+
+header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 70;
-    background-color: #88db96;
+    background-color: rgb(136, 219, 150);
     padding: 2px;
     height: 50px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    
+
 }
 
-#menuToggle{
-   
-   margin-left: px;
-   padding: 0px 5px;
-   position: relative;
-
-   
-}
-#titleApp{
-    font-family:'Patua One', serif;;
-    font-size:larger;
-    
-    margin: 0 auto;
-    z-index: 6;
-    
-}
-.dropdown ul{
-    background-color: rgb(114, 184, 126)
-    
+#menuToggle {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
+ul {
+    padding: 0px;
+    margin: 0px 0px 0px 15px;
+}
+
+ol {
+    padding: 20px;
+}
+
+/* Para telas menores que 720px */
+@media (max-width: 720px) {
+
+    /* Torna o botão visível e oculta os itens da lista */
+    #btn-toggle {
+        display: block;
+        /* Exibe o botão */
+    }
+
+    #icon-toggle {
+        display: block;
+        /* Exibe o ícone do menu */
+    }
+
+    .dropdown-menu {
+        display: none;
+        /* O menu dropdown estará oculto por padrão */
+    }
+
+    .dropdown-menu.show {
+        display: block;
+        /* Exibe o menu quando o dropdown estiver ativado */
+    }
+}
+
+/* Para telas maiores que 720px */
+@media (min-width: 721px) {
+
+    /* Exibe os itens do menu lado a lado */
+    .dropdown-menu {
+        display: flex;
+        /* Flexbox para alinhar os itens lado a lado */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .dropdown-item {
+        margin-left: 10px;
+        font-family: 'Patua One', sans-serif;
+    }
+
+    /* Oculta o botão e o ícone em telas maiores */
+    #btn-toggle {
+        display: none;
+    }
+
+    #icon-toggle {
+        display: none;
+    }
+}
+
+#btncadastar {
+    background-color: #88db96;
+    border: 0px;
+    color: #3d3d3d;
+    cursor: pointer;
+}
+
+#btncadastar:hover {
+    background-color: #7dc789;
+    /* Cor de fundo quando o cursor passa sobre o item */
+    color: #3d3d3d;
+    /* Cor do texto, para dar contraste */
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+}
+
+#btninventario {
+    background-color: #88db96;
+    border: 0px;
+    color: #3d3d3d;
+    cursor: pointer;
+}
+
+#btninventario:hover {
+    background-color: #7dc789;
+    /* Cor de fundo quando o cursor passa sobre o item */
+    color: #3d3d3d;
+    /* Cor do texto, para dar contraste */
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+}
+
+#btnUsuarios {
+    background-color: #88db96;
+    border: 0px;
+    color: #3d3d3d;
+    cursor: pointer;
+}
+
+#btnUsuarios:hover {
+    background-color: #7dc789;
+    /* Cor de fundo quando o cursor passa sobre o item */
+    color: #3d3d3d;
+    /* Cor do texto, para dar contraste */
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+}
+
+
+#btncrud img:hover {
+    background-color: #7dc789;
+    /* Cor de fundo quando o cursor passa sobre o item */
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+}
+
+#btncrud {
+    background-color: #88db96;
+    /* Cor de fundo quando o cursor passa sobre o item */
+    padding: 0px;
+    border: 0px;
+    /* Muda o cursor para indicar que é clicável */
+}
 
 /*--------- MAIN -----------*/
 
-main{
-    padding: 2px;
 
+#titleApp {
+    margin: 0 auto;
+    z-index: 6;
+
+}
+
+#titleApp p {
+    margin: 0px;
+    font-family: 'Patua One', serif;
+    ;
+    font-size: larger;
 }
 
 
 /*---------- FOTTER ------------*/
-footer{
+footer {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -72,20 +217,29 @@ footer{
 }
 
 
-#caixaFotter{
-    
+#caixaFotter {
+
     width: 100%;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     top: 85%;
+    z-index: 70;
 }
 
-#img_retorno{
-    margin-right: 25px;
+#img_retorno {
+    margin-right: 15px;
     width: 25px;
     height: 25px;
 }
-#img_crud{
-    margin-right: 25px;
-    }
+
+#img_retorno:hover {
+    background-color: #74b981;
+    /* Cor de fundo quando o cursor passa sobre o item */
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+}
+
+#img_crud {
+    margin-right: 15px;
+}

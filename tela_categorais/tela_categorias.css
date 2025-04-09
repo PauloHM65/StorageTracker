@@ -63,17 +63,6 @@ main {
     height: 25px;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    height: 40px;
-    background-color: #88db96;
-}
 
 #img_crud {
     margin-right: 25px;
@@ -92,11 +81,13 @@ footer {
 
 
 }
+
 #link_categorias {
     text-decoration: none;
     color: black;
-    
+
 }
+
 .categorias_prd {
     box-sizing: border-box;
     display: inline-block;
@@ -118,7 +109,7 @@ footer {
 
 
 /*---------- FOTTER ------------*/
-footer{
+footer {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -131,8 +122,8 @@ footer{
 }
 
 
-#caixaFotter{
-    
+#caixaFotter {
+
     width: 100%;
     display: flex;
     flex-direction: row-reverse;
@@ -140,11 +131,12 @@ footer{
     top: 85%;
 }
 
-#img_retorno{
+#img_retorno {
     margin-right: 25px;
     width: 25px;
     height: 25px;
 }
-#img_crud{
+
+#img_crud {
     margin-right: 25px;
-    }
+}

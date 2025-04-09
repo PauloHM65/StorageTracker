@@ -125,13 +125,13 @@ function imprimeDado(categorias) {
 
 /* -------------------- DIRECIONA PAGINA -------------------------------*/
 function HOME() {
-    window.location.href = "https://paulohm65.github.io/StorageTracker/HOME/home.html";
+    window.location.href = "/HOME/home.html";
 }
 function INVENTARIO() {
-    window.location.href = "https://paulohm65.github.io/StorageTracker/tela_categorais/tela_categorias.html";
+    window.location.href = "/tela_categorais/tela_categorias.html";
 }
 function BTNCRUD() {
-    window.location.href = "https://paulohm65.github.io/StorageTracker/CRUD/nome_produto.html";
+    window.location.href = "/CRUD/nome_produto.html";
 }
 
 document.getElementById('btncadastar').addEventListener('click', HOME);
