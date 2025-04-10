@@ -1,3 +1,178 @@
+/*--------HEADER-------------*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 70;
+    background-color: rgb(136, 219, 150);
+    padding: 2px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#menuToggle {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+ul {
+    padding: 0px;
+    margin: 0px 0px 0px 5px;
+    border: 0px;
+}
+
+li {
+    padding: 0px 0px 0px 15px;
+    margin: 0px;
+    border: 0px;
+}
+
+#btn-toggle {
+    display: none;
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+}
+
+/* Para telas pequenas */
+@media screen and (max-width: 721px) {
+    #btn-toggle {
+        display: block;
+    }
+
+    .dropdown-menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    .dropdown-menu.active {
+        display: block;
+        margin-top: 36px;
+    }
+    li{
+        padding: 0px;
+        background-color:#88db96 ;
+    }
+    #btnHome {
+        width: 100%;
+        background-color: #7dc789;
+    }
+    #btnHome:hover {
+        background-color: #88db96;
+    }
+    #btnInventario {
+        width: 100%;
+        background-color: #7dc789;
+    }
+    #btnInventario:hover {
+        background-color: #88db96;
+    }
+    #btnUsuarios {
+        width: 100%;
+        background-color: #7dc789;
+    }
+    #btnUsuarios:hover {
+        background-color: #88db96;
+    }
+}
+
+#btnHome {
+    background-color: #88db96;
+    border: 0px;
+    padding: 0px;
+    color: #3d3d3d;
+    cursor: pointer;
+    
+}
+
+#btnHome:hover {
+    background-color: #7dc789;
+    /* Cor de fundo quando o cursor passa sobre o item */
+    color: #3d3d3d;
+    /* Cor do texto, para dar contraste */
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+}
+
+#btnInventario {
+    background-color: #88db96;
+    border: 0px;
+    padding: 0px;
+    color: #3d3d3d;
+    cursor: pointer;
+    
+
+}
+
+#btnInventario:hover {
+    background-color: #7dc789;
+    /* Cor de fundo quando o cursor passa sobre o item */
+    color: #3d3d3d;
+    /* Cor do texto, para dar contraste */
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+}
+
+#btnUsuarios {
+    background-color: #88db96;
+    border: 0px;
+    padding: 0px;
+    color: #3d3d3d;
+    cursor: pointer;
+    
+}
+
+#btnUsuarios:hover {
+    background-color: #7dc789;
+    /* Cor de fundo quando o cursor passa sobre o item */
+    color: #3d3d3d;
+    /* Cor do texto, para dar contraste */
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+}
+
+
+#btncrud img:hover {
+    background-color: #7dc789;
+    /* Cor de fundo quando o cursor passa sobre o item */
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+}
+
+#btncrud {
+    background-color: #88db96;
+    /* Cor de fundo quando o cursor passa sobre o item */
+    padding: 0px;
+    border: 0px;
+    /* Muda o cursor para indicar que é clicável */
+}
+
+
+/*------------MAIN-------------*/
+main{
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 50px 0;
+}
 
 .container {
     max-width: 400px;
@@ -215,61 +390,8 @@ button {
 }
 
 
-/*------------------  HEADER ----------------------*/
-
-
-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 70;
-    background-color: #88db96;
-    padding: 2px;
-    height: 50px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    
-}
-
-#menuToggle{
-   
-   margin-left: px;
-   padding: 0px 5px;
-   position: relative;
-
-   
-}
-#titleApp{
-    font-family:'Patua One', serif;;
-    font-size:larger;
-    
-    margin: 0 auto;
-    z-index: 6;
-    
-}
-.dropdown ul{
-    background-color: rgb(114, 184, 126)
-    
-}
-
-
-/*--------- MAIN -----------*/
-
-main{
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 50px 0;
-}
-
-
-/*---------- FOTTER ------------*/
-footer{
+/*----------FOOTER-----------*/
+footer {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -279,12 +401,10 @@ footer{
     align-items: center;
     height: 40px;
     background-color: #88db96;
-    
 }
 
+#caixaFotter {
 
-#caixaFotter{
-    
     width: 100%;
     display: flex;
     flex-direction: row-reverse;
@@ -292,11 +412,8 @@ footer{
     top: 85%;
 }
 
-#img_retorno{
+#img_retorno {
     margin-right: 25px;
     width: 25px;
     height: 25px;
 }
-#img_crud{
-    margin-right: 25px;
-    }

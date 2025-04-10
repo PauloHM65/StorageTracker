@@ -17,28 +17,26 @@
 
 <body>
   <header>
-    <div id="menuToggle">
-      <div class="dropdown">
-        <button class="btn " type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <label for="menutoggle" class="menu-icon">
-            <i class="fa fa-bars"></i>
-          </label>
+    <nav id="menuToggle">
+        <button class="btnToggle" id="btn-toggle" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                <path d="M3 6h18v2H3V6zm0 10h18v2H3v-2zm0-5h18v2H3v-2z"/>
+
+              </svg>
+              
         </button>
         <ul class="dropdown-menu">
-          <li><button class="dropdown-item" id="btncadastar" type="button">HOME</button></li>
-          <li><button class="dropdown-item" id="btninventario" type="button">Inventario</button></li>
+            <li><button class="dropdown-item" id="btnHome" type="button">HOME</button></li>
+            <li><button class="dropdown-item" id="btnInventario" type="button">Inventario</button></li>
+            <li><button class="dropdown-item" id="btnUsuarios" type="button">Usuarios</button></li>
         </ul>
-      </div>
+    </nav>
 
-    </div>
 
-    <div id="titleApp">
-      StockTracker
-    </div>
     <div class="extra">
-      <button class="dropdown-item" id="btncrud" type="button"><img src="img/icons8-mais-24.png" id="img_crud"></button>
+        <button id="btncrud" type="button"><img src="img/icons8-mais-24.png" id="img_crud"></button>
     </div>
-  </header>
+</header>
 
 
 

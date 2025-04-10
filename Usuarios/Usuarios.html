@@ -17,26 +17,27 @@
 
 <body>
     <header>
-        <div id="menuToggle">
-            <div class="dropdown">
-                <button class="btn " id="btn-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fa fa-bars" id="icon-toggle"></i>
-                </button>
-                <ul class="dropdown-menu">
-                    <li><button class="dropdown-item" id="btncadastar" type="button">HOME</button></li>
-                    <li><button class="dropdown-item" id="btninventario" type="button">Inventario</button></li>
-                    <li><button class="dropdown-item" id="btnUsuarios" type="button">Usuarios</button></li>
-                </ul>
-            </div>
-
+        <nav id="menuToggle">
+    
+          <button class="btn " id="btn-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa fa-bars" id="icon-toggle"></i>
+          </button>
+          <ul class="dropdown-menu">
+            <ol><button class="dropdown-item" id="btncadastar" type="button">HOME</button></ol>
+            <ol><button class="dropdown-item" id="btninventario" type="button">Inventario</button></ol>
+            <ol><button class="dropdown-item" id="btnUsuarios" type="button">Usuarios</button></ol>
+          </ul>
+    
+    
+        </nav>
+    
+        <div id="titleApp">
+          StockTracker
         </div>
-
-
         <div class="extra">
-            <button class="dropdown-item" id="btncrud" type="button"><img src="img/icons8-mais-24.png"
-                    id="img_crud"></button>
+          <button id="btncrud" type="button"><img src="img/icons8-mais-24.png" id="img_crud"></button>
         </div>
-    </header>
+      </header>
 
     <main>
         <!--  Aparecer apenas os nomes das categorias 
@@ -50,11 +51,11 @@
 
     <footer>
         <div id="caixaFotter">
-
-            <a href="#"><img src="img/icons8-voltar-50.png" id="img_retorno"></a>
-            <!-- muda o # para o endereço da pagina inicial -->
+    
+          <a href="#"><img src="img/icons8-voltar-50.png" id="img_retorno"></a>
+          <!-- muda o # para o endereço da pagina inicial -->
         </div>
-    </footer>
+      </footer>
 
 
     <script src="Usuarios.js"></script>

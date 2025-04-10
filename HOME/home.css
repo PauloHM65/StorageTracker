@@ -4,7 +4,172 @@ body {
     margin: 0;
 }
 
+/*--------HEADER-------------*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 70;
+    background-color: rgb(136, 219, 150);
+    padding: 2px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 
+}
+
+#menuToggle {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+ul {
+    padding: 0px;
+    margin: 0px 0px 0px 5px;
+    border: 0px;
+}
+
+li {
+    padding: 0px 0px 0px 15px;
+    margin: 0px;
+    border: 0px;
+}
+
+#btn-toggle {
+    display: none;
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+}
+
+/* Para telas pequenas */
+@media screen and (max-width: 721px) {
+    #btn-toggle {
+        display: block;
+    }
+
+    .dropdown-menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    .dropdown-menu.active {
+        display: block;
+        margin-top: 36px;
+    }
+    li{
+        padding: 0px;
+        background-color:#88db96 ;
+    }
+    #btnHome {
+        width: 100%;
+        background-color: #7dc789;
+    }
+    #btnHome:hover {
+        background-color: #88db96;
+    }
+    #btnInventario {
+        width: 100%;
+        background-color: #7dc789;
+    }
+    #btnInventario:hover {
+        background-color: #88db96;
+    }
+    #btnUsuarios {
+        width: 100%;
+        background-color: #7dc789;
+    }
+    #btnUsuarios:hover {
+        background-color: #88db96;
+    }
+}
+
+#btnHome {
+    background-color: #88db96;
+    border: 0px;
+    padding: 0px;
+    color: #3d3d3d;
+    cursor: pointer;
+    
+}
+
+#btnHome:hover {
+    background-color: #7dc789;
+    /* Cor de fundo quando o cursor passa sobre o item */
+    color: #3d3d3d;
+    /* Cor do texto, para dar contraste */
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+}
+
+#btnInventario {
+    background-color: #88db96;
+    border: 0px;
+    padding: 0px;
+    color: #3d3d3d;
+    cursor: pointer;
+    
+
+}
+
+#btnInventario:hover {
+    background-color: #7dc789;
+    /* Cor de fundo quando o cursor passa sobre o item */
+    color: #3d3d3d;
+    /* Cor do texto, para dar contraste */
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+}
+
+#btnUsuarios {
+    background-color: #88db96;
+    border: 0px;
+    padding: 0px;
+    color: #3d3d3d;
+    cursor: pointer;
+    
+}
+
+#btnUsuarios:hover {
+    background-color: #7dc789;
+    /* Cor de fundo quando o cursor passa sobre o item */
+    color: #3d3d3d;
+    /* Cor do texto, para dar contraste */
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+}
+
+
+#btncrud img:hover {
+    background-color: #7dc789;
+    /* Cor de fundo quando o cursor passa sobre o item */
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+}
+
+#btncrud {
+    background-color: #88db96;
+    /* Cor de fundo quando o cursor passa sobre o item */
+    padding: 0px;
+    border: 0px;
+    /* Muda o cursor para indicar que é clicável */
+}
+
+
+/*--------MAIN-------------*/
 main {
     background-color: #88db96;
     z-index: 0;
@@ -38,155 +203,6 @@ main::before {
     /* Cor verde com transparência */
     z-index: 1;
 }
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 70;
-    background-color: rgb(136, 219, 150);
-    padding: 2px;
-    height: 50px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-
-}
-
-#menuToggle {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-ul {
-    padding: 0px;
-    margin: 0px 0px 0px 15px;
-}
-
-ol {
-    padding: 20px;
-}
-
-/* Para telas menores que 720px */
-@media (max-width: 720px) {
-
-    /* Torna o botão visível e oculta os itens da lista */
-    #btn-toggle {
-        display: block;
-        /* Exibe o botão */
-    }
-
-    #icon-toggle {
-        display: block;
-        /* Exibe o ícone do menu */
-    }
-
-    .dropdown-menu {
-        display: none;
-        /* O menu dropdown estará oculto por padrão */
-    }
-
-    .dropdown-menu.show {
-        display: block;
-        /* Exibe o menu quando o dropdown estiver ativado */
-    }
-}
-
-/* Para telas maiores que 720px */
-@media (min-width: 721px) {
-
-    /* Exibe os itens do menu lado a lado */
-    .dropdown-menu {
-        display: flex;
-        /* Flexbox para alinhar os itens lado a lado */
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .dropdown-item {
-        margin-left: 10px;
-        font-family: 'Patua One', sans-serif;
-    }
-
-    /* Oculta o botão e o ícone em telas maiores */
-    #btn-toggle {
-        display: none;
-    }
-
-    #icon-toggle {
-        display: none;
-    }
-}
-
-#btncadastar {
-    background-color: #88db96;
-    border: 0px;
-    color: #3d3d3d;
-    cursor: pointer;
-}
-
-#btncadastar:hover {
-    background-color: #7dc789;
-    /* Cor de fundo quando o cursor passa sobre o item */
-    color: #3d3d3d;
-    /* Cor do texto, para dar contraste */
-    cursor: pointer;
-    /* Muda o cursor para indicar que é clicável */
-}
-
-#btninventario {
-    background-color: #88db96;
-    border: 0px;
-    color: #3d3d3d;
-    cursor: pointer;
-}
-
-#btninventario:hover {
-    background-color: #7dc789;
-    /* Cor de fundo quando o cursor passa sobre o item */
-    color: #3d3d3d;
-    /* Cor do texto, para dar contraste */
-    cursor: pointer;
-    /* Muda o cursor para indicar que é clicável */
-}
-
-#btnUsuarios {
-    background-color: #88db96;
-    border: 0px;
-    color: #3d3d3d;
-    cursor: pointer;
-}
-
-#btnUsuarios:hover {
-    background-color: #7dc789;
-    /* Cor de fundo quando o cursor passa sobre o item */
-    color: #3d3d3d;
-    /* Cor do texto, para dar contraste */
-    cursor: pointer;
-    /* Muda o cursor para indicar que é clicável */
-}
-
-
-#btncrud img:hover {
-    background-color: #7dc789;
-    /* Cor de fundo quando o cursor passa sobre o item */
-    cursor: pointer;
-    /* Muda o cursor para indicar que é clicável */
-}
-
-#btncrud {
-    background-color: #88db96;
-    /* Cor de fundo quando o cursor passa sobre o item */
-    padding: 0px;
-    border: 0px;
-    /* Muda o cursor para indicar que é clicável */
-}
-
-/*--------- MAIN -----------*/
 
 
 #titleApp {

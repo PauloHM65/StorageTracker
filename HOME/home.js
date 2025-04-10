@@ -1,3 +1,10 @@
+const btnToggle = document.getElementById("btn-toggle");
+const dropdownMenu = document.querySelector(".dropdown-menu");
+
+btnToggle.addEventListener("click", () => {
+  dropdownMenu.classList.toggle("active");
+});
+
 function HOME() {
     window.location.href = "/HOME/home.html";
 }
@@ -11,8 +18,8 @@ function USUARIO() {
   window.location.href = "/Usuarios/Usuarios.html";
 }
 
-document.getElementById('btncadastar').addEventListener('click', HOME);
-document.getElementById('btninventario').addEventListener('click', INVENTARIO);
+document.getElementById('btnHome').addEventListener('click', HOME);
+document.getElementById('btnInventario').addEventListener('click', INVENTARIO);
 document.getElementById('btncrud').addEventListener('click', BTNCRUD);
 document.getElementById('btnUsuarios').addEventListener('click', USUARIO);
 

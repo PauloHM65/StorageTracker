@@ -221,7 +221,12 @@ function updateTable() {
 
 
 /*------------- NAVEGAÇÃO TOGGLE -------------------*/
+const btnToggle = document.getElementById("btn-toggle");
+const dropdownMenu = document.querySelector(".dropdown-menu");
 
+btnToggle.addEventListener("click", () => {
+  dropdownMenu.classList.toggle("active")
+});
 function HOME() {
     window.location.href = "/HOME/home.html";
 }

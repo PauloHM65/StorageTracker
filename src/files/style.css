@@ -1,155 +1,293 @@
+body {
 
-
-body{
-    
     margin: 0px;
     z-index: 1;
     box-sizing: border-box;
 
 }
 
-header{
+/*--------HEADER-------------*/
+header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 70;
-    background-color: #88db96;
+    background-color: rgb(136, 219, 150);
     padding: 2px;
     height: 50px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    
+    justify-content: space-between;
+
 }
 
-#menuToggle{
-   
-   margin-left: px;
-   padding: 0px 5px;
-   position: relative;
-
-   
+#menuToggle {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
-#titleApp{
-    font-family:'Patua One', serif;;
-    font-size:larger;
-    
+
+ul {
+    padding: 0px;
+    margin: 0px 0px 0px 15px;
+}
+
+ol {
+    padding: 20px;
+}
+
+/* Para telas menores que 720px */
+@media (max-width: 720px) {
+
+    /* Torna o botão visível e oculta os itens da lista */
+    #btn-toggle {
+        display: block;
+        /* Exibe o botão */
+    }
+
+    #icon-toggle {
+        display: block;
+        /* Exibe o ícone do menu */
+    }
+
+    .dropdown-menu {
+        display: none;
+        /* O menu dropdown estará oculto por padrão */
+    }
+
+    .dropdown-menu.show {
+        display: block;
+        /* Exibe o menu quando o dropdown estiver ativado */
+    }
+}
+
+/* Para telas maiores que 720px */
+@media (min-width: 721px) {
+
+    /* Exibe os itens do menu lado a lado */
+    .dropdown-menu {
+        display: flex;
+        /* Flexbox para alinhar os itens lado a lado */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .dropdown-item {
+        margin-left: 10px;
+        font-family: 'Patua One', sans-serif;
+    }
+
+    /* Oculta o botão e o ícone em telas maiores */
+    #btn-toggle {
+        display: none;
+    }
+
+    #icon-toggle {
+        display: none;
+    }
+}
+
+#btncadastar {
+    background-color: #88db96;
+    border: 0px;
+    color: #3d3d3d;
+    cursor: pointer;
+}
+
+#btncadastar:hover {
+    background-color: #7dc789;
+    /* Cor de fundo quando o cursor passa sobre o item */
+    color: #3d3d3d;
+    /* Cor do texto, para dar contraste */
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+}
+
+#btninventario {
+    background-color: #88db96;
+    border: 0px;
+    color: #3d3d3d;
+    cursor: pointer;
+}
+
+#btninventario:hover {
+    background-color: #7dc789;
+    /* Cor de fundo quando o cursor passa sobre o item */
+    color: #3d3d3d;
+    /* Cor do texto, para dar contraste */
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+}
+
+#btnUsuarios {
+    background-color: #88db96;
+    border: 0px;
+    color: #3d3d3d;
+    cursor: pointer;
+}
+
+#btnUsuarios:hover {
+    background-color: #7dc789;
+    /* Cor de fundo quando o cursor passa sobre o item */
+    color: #3d3d3d;
+    /* Cor do texto, para dar contraste */
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+}
+
+
+#btncrud img:hover {
+    background-color: #7dc789;
+    /* Cor de fundo quando o cursor passa sobre o item */
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+}
+
+#btncrud {
+    background-color: #88db96;
+    /* Cor de fundo quando o cursor passa sobre o item */
+    padding: 0px;
+    border: 0px;
+    /* Muda o cursor para indicar que é clicável */
+}
+
+#titleApp {
+    font-family: 'Patua One', serif;
+    ;
+    font-size: larger;
+
     margin: 0 auto;
     z-index: 6;
-    
+
 }
 
-main{
+#img_crud {
+    margin-right: 25px;
+}
+
+/*.dropdown ul {
+    background-color: rgb(114, 184, 126)
+}*/
+
+
+/*----------MAIN-----------*/
+main {
     margin-top: 87px;
     padding: 2px;
     margin-bottom: 42px;
 }
 
-
-
-.categoriaProdutos{
+.categoriaProdutos {
     position: fixed;
     top: 35px;
     left: 0;
     width: 100%;
-    border-top: 2px solid black ;
-    border-bottom: 2px solid black ;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 15px;
     background-color: white;
-    
-    
+
+
 
 }
-.categoriaProdutos  span{
+
+.categoriaProdutos span {
     padding: 5px;
     font-weight: bold;
     font-family: 'Bree Serif', serif;
 }
-#rowgray  {
+
+#rowgray {
 
     background-color: rgba(75, 75, 75, 0.185);
 
 }
-.row{
+
+.row {
     font-size: small;
 }
-.col{
+
+.col {
     border-right: 1px solid rgb(121, 121, 121);
 }
 
 
-#mostraNome{
-    padding: 0px;
-}
-#mostraPeso{
-    padding: 0px;
-}
-#mostraValor{
-    padding: 0px;
-}
-#mostraQtd{
-    padding: 0px;
-}
-#mostraMinQtd{
+#mostraNome {
     padding: 0px;
 }
 
-.cc{
+#mostraPeso {
+    padding: 0px;
+}
+
+#mostraValor {
+    padding: 0px;
+}
+
+#mostraQtd {
+    padding: 0px;
+}
+
+#mostraMinQtd {
+    padding: 0px;
+}
+
+.cc {
     box-sizing: border-box;
     padding-bottom: 5px;
     margin-bottom: 0px;
     margin-top: 0;
     border-bottom: black solid 1px;
-    overflow:auto ;
+    overflow: auto;
     height: 25.5px;
     display: flex;
     justify-content: center;
 }
-#c{
+
+#c {
     background-color: rgba(218, 218, 218, 0.397);
 }
-.cx{
+
+.cx {
     height: 25.5px;
 }
-#geral{
+
+#geral {
     width: 100%;
 }
-#formContatos{
+
+#formContatos {
     width: auto;
 }
-#camponome{
+
+#camponome {
     width: auto;
 }
-#campopeso{
+
+#campopeso {
     width: auto;
 }
-#campovalor{
+
+#campovalor {
     width: auto;
 }
-#campoqtd{
+
+#campoqtd {
     width: auto;
 }
-#campoMinqtd{
+
+#campoMinqtd {
     width: auto;
 }
-#caixaFotter{
-    
-    width: 100%;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    top: 85%;
-}
-#img_retorno{
-    margin-right: 25px;
-    width: 25px;
-    height: 25px;
-}
-footer{
+
+/*----------FOOTER-----------*/
+footer {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -160,11 +298,18 @@ footer{
     height: 40px;
     background-color: #88db96;
 }
-#img_crud{
-margin-right: 25px;
+
+#caixaFotter {
+
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    top: 85%;
 }
 
-.dropdown ul{
-    background-color: rgb(114, 184, 126)
-    
+#img_retorno {
+    margin-right: 25px;
+    width: 25px;
+    height: 25px;
 }
